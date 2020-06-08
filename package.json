@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://WeeJewel@github.com/athombv/node-homey-log.git"
+    "url": "git+https://github.com/athombv/node-homey-log.git"
   },
   "author": "",
   "license": "ISC",
@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/athombv/node-homey-log#readme",
   "dependencies": {
-    "raven": "^0.12.3"
+    "raven": "^2.6.4"
   },
   "config": {
     "npmPublishTagProduction": "latest",
