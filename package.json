@@ -1,7 +1,7 @@
 {
   "name": "homey-log",
   "version": "1.0.4",
-  "description": "",
+  "description": "Interface with Sentry for Homey",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,12 +13,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://WeeJewel@github.com/athombv/node-homey-log.git"
+    "url": "git+https://https://github.com/athombv/node-homey-log.git"
   },
-  "author": "",
+  "author": "Athom B.V.",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/athombv/node-homey-log/issues"
+  },
+  "engines": {
+    "node": ">=12"
   },
   "homepage": "https://github.com/athombv/node-homey-log#readme",
   "dependencies": {
