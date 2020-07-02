@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "serve": "concurrently \"serve build/docs/\" \"npm run jsdoc:watch\"",
+    "build": "npm run jsdoc",
+    "jsdoc": "cd docs; jsdoc -c jsdoc.json",
+    "jsdoc:watch": "npm-watch jsdoc"
   },
   "repository": {
     "type": "git",
@@ -19,8 +24,25 @@
   "dependencies": {
     "raven": "^0.12.3"
   },
-  "config": {
-    "npmPublishTagProduction": "latest",
-    "npmPublishTagStaging": "beta"
+  "devDependencies": {
+    "braintree-jsdoc-template": "^3.3.0",
+    "concurrently": "^5.1.0",
+    "eslint": "^7.2.0",
+    "eslint-config-athom": "^2.1.0",
+    "homey": "^2.4.0",
+    "jsdoc": "^3.6.4",
+    "npm-watch": "^0.6.0",
+    "serve": "^11.3.1"
+  },
+  "watch": {
+    "jsdoc": {
+      "patterns": [
+        "lib",
+        "README.md"
+      ],
+      "extensions": [
+        "js"
+      ]
+    }
   }
 }
