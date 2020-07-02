@@ -1,0 +1,8 @@
+build
+docs
+
+CONTRIBUTING.md
+.eslintrc.json
+.eslintignore
+.editorconfig
+.github
