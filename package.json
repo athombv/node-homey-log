@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://https://github.com/athombv/node-homey-log.git"
+    "url": "git+https://github.com/athombv/node-homey-log.git"
   },
   "author": "Athom B.V.",
   "license": "ISC",
