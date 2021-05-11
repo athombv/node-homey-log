@@ -1,19 +1,18 @@
 {
   "plugins": [
+    "jsdoc-ts-utils",
     "plugins/markdown"
   ],
   "source": {
     "include": [
-      "../README.md",
-      "../lib",
-      "../index.js"
+      "./README.md",
+      "./lib",
+      "./index.js"
     ]
   },
-  "templates": {
-    "referenceTitle": "documentation homey-log"
-  },
   "opts": {
+    "mainpagetitle": "Homey Log",
     "destination": "../build/docs",
-    "template": "../node_modules/braintree-jsdoc-template"
+    "template": "./node_modules/homey-jsdoc-template"
   }
 }
