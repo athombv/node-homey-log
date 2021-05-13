@@ -26,14 +26,14 @@
   },
   "homepage": "https://github.com/athombv/node-homey-log#readme",
   "dependencies": {
-    "raven": "athombv/raven-node"
+    "raven": "git+https://git@github.com/athombv/raven-node.git"
   },
   "devDependencies": {
     "concurrently": "^5.1.0",
     "eslint": "^7.2.0",
     "eslint-config-athom": "^2.1.0",
     "homey": "^2.4.0",
-    "homey-jsdoc-template": "github:athombv/homey-jsdoc-template#1.0.3",
+    "homey-jsdoc-template": "git+https://git@github.com/athombv/homey-jsdoc-template.git#1.0.3",
     "jsdoc": "^3.6.6",
     "jsdoc-ts-utils": "^1.1.2",
     "npm-watch": "^0.6.0",
