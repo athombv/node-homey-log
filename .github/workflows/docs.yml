@@ -22,7 +22,9 @@ jobs:
 
     # Build
     - name: Build
-      run: npm run build
+      run: |
+        npm ci
+        npm run build
 
     # Deploy
     - name: Deploy To GitHub Pages
