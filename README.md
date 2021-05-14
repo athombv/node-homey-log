@@ -12,7 +12,7 @@ Documentation is available at [https://athombv.github.io/node-homey-log/](https:
 
 * [node-homey-zwavedriver](https://athombv.github.io/node-homey-zwavedriver) — Module for Z-Wave drivers
 * [node-homey-zigbeedriver](https://athombv.github.io/node-homey-zigbeedriver) — Module for Zigbee drivers
-* [node-homey-rfdriver](https://athombv.github.io/node-homey-oauth2app) — Module for RF (433 Mhz, 868 MHz, Infrared) drivers
+* [node-homey-rfdriver](https://athombv.github.io/node-homey-rfdriver) — Module for RF (433 Mhz, 868 MHz, Infrared) drivers
 * [node-homey-oauth2app](https://athombv.github.io/node-homey-oauth2app) — Module for OAuth2 apps
 
 ## Installation
