@@ -26,7 +26,7 @@
              </header><div class="navigation__content" data-navigation-target><div class="navigation__search search">
             <input title="filter" placeholder="Filter..." data-navigation-search class="search__input" type="search">
             <button data-navigation-search-reset class="search__reset --mask" type="button" title="Reset"></button>
-           </div><div data-navigation-scroll class="navigation__scroll scroll trim"><div class="navigation__menu trim"><nav class="nav-group"><h3 class="nav-group__title">Classes</h3><ul class="nav-group__list"><li data-search-key="log" class="nav-group__item"><a href="Log.html">Log</a></li></ul></nav></div></div></div>
+           </div><div data-navigation-scroll class="navigation__scroll scroll trim"><div class="navigation__menu trim"><nav class="nav-group"><h3 class="nav-group__title">Classes</h3><ul class="nav-group__list"><li data-lvl="0" data-search-key="log" class="nav-group__item"><a href="Log.html"> Log</a></li></ul></nav></div></div></div>
   </nav>
 
   <main id="main" class="main container__main">
@@ -61,8 +61,9 @@
 <pre class="prettyprint source lang-bash"><code>npm install --save homey-log
 </code></pre>
 <h2>Getting started</h2>
-<p>In <code>env.json</code>, add the Sentry URL:</p>
+<p>In <code>env.json</code>, add the Sentry URL. If you would like to send the logs to Sentry <em>also</em> during development, set force log to <code>1</code>.</p>
 <pre class="prettyprint source lang-json"><code>{
+  &quot;HOMEY_LOG_FORCE&quot;: &quot;0&quot;,
   &quot;HOMEY_LOG_URL&quot;: &quot;https://foo:bar@sentry.io/123456&quot;
 }
 </code></pre>
