@@ -26,7 +26,6 @@
   },
   "homepage": "https://github.com/athombv/node-homey-log#readme",
   "dependencies": {
-    "homey-jsdoc-template": "github:athombv/homey-jsdoc-template#1.1.2",
     "raven": "github:athombv/raven-node"
   },
   "devDependencies": {
@@ -38,6 +37,7 @@
     "jsdoc-ts-utils": "^1.1.2",
     "npm-watch": "^0.6.0",
     "serve": "^11.3.1",
+    "homey-jsdoc-template": "github:athombv/homey-jsdoc-template#1.2.2",
     "watch": "^1.0.2"
   },
   "watch": {

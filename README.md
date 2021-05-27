@@ -23,10 +23,11 @@ npm install --save homey-log
 
 ## Getting started
 
-In `env.json`, add the Sentry URL:
+In `env.json`, add the Sentry URL. If you would like to send the logs to Sentry *also* during development, set force log to `1`.
 
 ```json
 {
+  "HOMEY_LOG_FORCE": "0",
   "HOMEY_LOG_URL": "https://foo:bar@sentry.io/123456"
 }
 ```
