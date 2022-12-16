@@ -89,6 +89,9 @@ jobs:
           git pull
           git push --follow-tags
 
+      - name: Generate TypeScript typings
+        run: npm run typings:generate
+
       # Publish when this action is running on branch production
       - name: Publish
         if: github.ref == 'refs/heads/production'

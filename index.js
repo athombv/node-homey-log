@@ -1,3 +1,5 @@
 'use strict';
 
-module.exports.Log = require('./lib/Log.js');
+const Log = require('./lib/Log');
+
+module.exports = {Log};
