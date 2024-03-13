@@ -1,12 +1,14 @@
-import Homey from 'homey/lib/Homey';
-import Raven from 'raven';
+'use strict';
+
+import Homey = require('homey');
+import Raven = require('raven');
 
 interface LogInstanceParams {
   /**
    * `this.homey` instance in
    * your app (e.g. `App#homey`/`Driver#homey`/`Device#homey`).
    */
-  homey: Homey;
+  homey: Homey.App;
 
   /**
    * Additional options for Raven
@@ -30,15 +32,32 @@ declare class Log {
   constructor(args: LogInstanceParams);
 
   /**
-   * Init Raven, provide falsy value as `url` to prevent sending events upstream in debug mode.
-   * @param {string|boolean} url
-   * @param {object} opts
-   * @param {boolean} opts.captureUnhandledRejections - Track unhandled promise rejections not
-   * enabled by default)
-   * @returns {Log}
+   * Mimic SDK log method.
    * @private
    */
-  init(url: boolean | string, opts: Raven.RavenOptions): Log;
+  private static _log(): void;
+
+  /**
+   * Mimic SDK error method.
+   * @private
+   */
+  private static _error(): void;
+
+  /**
+   * Mimic SDK timestamp.
+   * @private
+   */
+  private static _logTime(): string;
+
+  /**
+   * Raven.mergeContext covers only 1-level of the context (tags, extra, user)
+   * We need to merge a 2-level of the context
+   * see https://github.com/getsentry/raven-node/issues/228
+   * @param key The key where we can access the sent value
+   * @param value The logged value
+   * @private
+   */
+  private static _mergeContext(key: string, value: object): void;
 
   /**
    * Set `tags` that will be sent as context with every message or error. See the raven-node
@@ -76,33 +95,12 @@ declare class Log {
   captureException(err: Error): Promise<string | undefined>;
 
   /**
-   * Mimic SDK log method.
+   * Init Raven, provide falsy value as `url` to prevent sending events upstream in debug mode.
+   * @param url falsy value as `url` to prevent sending events upstream in debug mode
+   * @param opts Raven constructor params
    * @private
    */
-  private static _log(): void;
-
-  /**
-   * Mimic SDK error method.
-   * @private
-   */
-  private static _error(): void;
-
-  /**
-   * Mimic SDK timestamp.
-   * @private
-   */
-  private static _logTime(): string;
-
-  /**
-   * Raven.mergeContext covers only 1-level of the context (tags, extra, user)
-   * We need to merge a 2-level of the context
-   * see https://github.com/getsentry/raven-node/issues/228
-   * @param key The key where we can access the sent value
-   * @param value The logged value
-   * @private
-   */
-  private static _mergeContext(key: string, value: object): void;
-
+  private init(url: boolean | string, opts: Raven.ConstructorOptions): Log;
 }
 
 export = Log;
