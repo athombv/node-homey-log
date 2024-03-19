@@ -23,7 +23,8 @@ npm install --save homey-log
 
 ## Getting started
 
-In `env.json`, add the Sentry URL. If you would like to send the logs to Sentry *also* during development, set force log to `1`.
+In `env.json`, add the Sentry URL. The Sentry URL is found in your project settings, and is denoted [DSN](https://docs.sentry.io/platforms/node).  
+If you would like to send the logs to Sentry *also* during development, set force log to `1`.
 
 ```json
 {
@@ -47,7 +48,7 @@ class MyApp extends Homey.App {
 ### Notes
 
 * When your app crashes due to an `uncaughtException` or `unhandledRejection`, this will automatically be sent to Sentry.
-* When running your app with `homey app run` events will not be sent to Sentry.
+* When running your app with `homey app run` events will not be sent to Sentry, unless you set `HOMEY_LOG_FORCE` to `1`.
 
 ## Changelog
 ### 2.0.0
