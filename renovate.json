@@ -50,14 +50,9 @@
       "enabled": false
     },
     {
-      "matchPackagePrefixes": ["Sentry"],
-      "matchManagers": ["nuget"],
-      "groupName": "Sentry packages",
-      "groupSlug": "sentry"
-    },
-    {
-      "matchPackagePrefixes": ["homey-"],
-      "minimumReleaseAge": null
+      "matchPackagePrefixes": ["homey", "@sentry"],
+      "enabled": true,
+      "minimumReleaseAge": "1 day"
     }
   ]
 }
