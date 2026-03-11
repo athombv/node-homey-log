@@ -23,11 +23,26 @@
   <link rel="preload" as="script" href="scripts/table.js">
   <link rel="preload" as="script" href="scripts/hash-link.js">
   <link rel="preload" as="script" href="scripts/docs-nav.js">
+  <link rel="preload" as="script" href="scripts/hash-highlight.js">
+  <link rel="preload" as="script" href="scripts/darkmode.js">
+
+  <!-- Start DarkMode -->
+  <script>
+    if (localStorage.getItem('darkmode') === 'true') {
+      document.documentElement.classList.add('darkmode');
+    }
+  </script>
+  <!-- End DarkMode -->
 </head>
 
 <body>
+
+
 <div class="container">
-  <div class="container__docs-nav">
+  <div class="container__top-nav">
+    <button data-darkmode-toggle class="darkmode-toggle">
+      <span class="darkmode-toggle__icon --mask"></span>
+    </button>
     <div class="docs-nav">
       <button data-docs-nav-toggle class="docs-nav__button" title="All documentation"><span
           class="docs-nav__button-icon --mask"></span></button>
@@ -39,17 +54,24 @@
           <div class="docs-nav__column trim">
             <h3>Homey Apps SDK</h3>
             <ul class="docs-nav__list">
-              <li class="docs-nav__item"><a target="_blank" href="https://apps.developer.homey.app/">Documentation</a></li>
-              <li class="docs-nav__item"><a target="_blank" href="https://apps-sdk-v3.developer.homey.app/">Reference</a></li>
+              <li class="docs-nav__item"><a target="_blank" href="https://apps.developer.homey.app/">Documentation</a>
+              </li>
+              <li class="docs-nav__item"><a target="_blank"
+                                            href="https://apps-sdk-v3.developer.homey.app/">JavaScript Reference</a></li>
+              <li class="docs-nav__item"><a target="_blank"
+                                            href="https://python-apps-sdk-v3.developer.homey.app/">Python Reference</a></li>
             </ul>
             <h3>Homey Web API</h3>
             <ul class="docs-nav__list">
-              <li class="docs-nav__item"><a target="_blank" href="https://api.developer.homey.app/">Documentation</a></li>
-              <li class="docs-nav__item"><a target="_blank" href="https://athombv.github.io/node-homey-api/">Reference</a></li>
+              <li class="docs-nav__item"><a target="_blank" href="https://api.developer.homey.app/">Documentation</a>
+              </li>
+              <li class="docs-nav__item"><a target="_blank"
+                                            href="https://athombv.github.io/node-homey-api/">Reference</a></li>
             </ul>
             <h3>Tools</h3>
             <ul class="docs-nav__list">
-              <li class="docs-nav__item"><a target="_blank" href="https://tools.developer.homey.app/">Developer Tools</a></li>
+              <li class="docs-nav__item"><a target="_blank" href="https://tools.developer.homey.app/">Developer
+                  Tools</a></li>
             </ul>
           </div>
           <div class="docs-nav__column trim">
@@ -61,12 +83,16 @@
               <li class="docs-nav__item"><a target="_blank" href="https://athombv.github.io/node-homey-zwavedriver/">Homey
                   ZWaveDriver</a>
               </li>
-              <li class="docs-nav__item"><a target="_blank" href="https://athombv.github.io/node-homey-rfdriver/">Homey RFDriver</a>
+              <li class="docs-nav__item"><a target="_blank" href="https://athombv.github.io/node-homey-rfdriver/">Homey
+                  RFDriver</a>
               </li>
-              <li class="docs-nav__item"><a target="_blank" href="https://athombv.github.io/node-homey-log/">Homey Log</a></li>
-              <li class="docs-nav__item"><a target="_blank" href="https://athombv.github.io/node-zigbee-clusters/">Zigbee Clusters</a>
+              <li class="docs-nav__item"><a target="_blank" href="https://athombv.github.io/node-homey-log/">Homey
+                  Log</a></li>
+              <li class="docs-nav__item"><a target="_blank" href="https://athombv.github.io/node-zigbee-clusters/">Zigbee
+                  Clusters</a>
               </li>
-              <li class="docs-nav__item"><a target="_blank" href="https://athombv.github.io/node-homey-oauth2app/">Homey OAuth2</a></li>
+              <li class="docs-nav__item"><a target="_blank" href="https://athombv.github.io/node-homey-oauth2app/">Homey
+                  OAuth2</a></li>
             </ul>
           </div>
         </div>
@@ -113,7 +139,7 @@
         
         Log
         
-        <span class="function__parameters">(<span class="function__parameter">homey</span>, <span class="function__parameter">options</span>)</span><span class="function__type-signature"></span>
+        <span class="function__parameters">(<span class="function__parameter">args</span>)</span><span class="function__type-signature"></span>
         
       </h2>
       
@@ -122,6 +148,8 @@
 
   <article>
     <div class="container-overview">
+      
+
       
       
 
@@ -133,7 +161,7 @@
   <h3 class="method__name"><a data-hash-link class="method__hash-link" href="#Log"></a>Log</h3>
   <span class="method__function function">
     
-    <span class="function__type-signature"></span>new Log<span class="function__parameters">(<span class="function__parameter">homey</span>, <span class="function__parameter">options</span>)</span><span class="function__type-signature"></span>
+    <span class="function__type-signature"></span>new Log<span class="function__parameters">(<span class="function__parameter">args</span>)</span><span class="function__type-signature"></span>
     
   </span>
   
@@ -179,14 +207,16 @@
     
 
     <tr data-table-lvl="0" data-table-row-id="0-0"
-        data-table-row-parent="0" >
+        data-table-row-parent="0" data-table-collapsed=true>
       
       <td class="name position-relative">
         
-        <div class="lvl">
+        <div class="lvl lvl--group">
+          
+          <div class="lvl__indent"></div>
           
         </div>
-        <code>homey</code>
+        <code>args</code>
         
       </td>
       
@@ -199,6 +229,51 @@
 
         
 
+        
+
+        
+
+      </td>
+
+
+      <td class="description last trim">
+      </td>
+    </tr>
+
+    
+    
+
+    
+
+    <tr data-table-lvl="1" data-table-row-id="0-0-0"
+        data-table-row-parent="0-0" >
+      
+      <td class="name position-relative">
+        
+        <div class="lvl">
+          
+          <div class="lvl__indent"></div>
+          
+        </div>
+        <code>homey</code>
+        
+      </td>
+      
+
+      <td class="params__type">
+        
+        
+<span class="param-type">HomeyModule</span>
+
+
+        
+
+        
+        
+
+        
+
+        
         
 
         
@@ -215,12 +290,14 @@ your app (e.g. <code>App#homey</code>/<code>Driver#homey</code>/<code>Device#hom
 
     
 
-    <tr data-table-lvl="0" data-table-row-id="0-1"
-        data-table-row-parent="0" >
+    <tr data-table-lvl="1" data-table-row-id="0-0-1"
+        data-table-row-parent="0-0" >
       
       <td class="name position-relative">
         
         <div class="lvl">
+          
+          <div class="lvl__indent"></div>
           
         </div>
         <code>options</code>
@@ -237,6 +314,14 @@ your app (e.g. <code>App#homey</code>/<code>Driver#homey</code>/<code>Device#hom
         
 
         
+        
+        <span class="color-text-light">&lt;optional></span><br>
+        
+
+        
+
+        
+        
 
         
 
@@ -247,6 +332,19 @@ your app (e.g. <code>App#homey</code>/<code>Driver#homey</code>/<code>Device#hom
       </td>
     </tr>
 
+    
+
+    
+    
+
+    <tr data-table-lvl="0" data-table-row-parent="0-0" data-table-row-is-shown="false">
+      <td class="name">
+        <div class="lvl">
+          
+        </div>
+        <span class="font-weight-bold">}</span>
+      </td>
+    </tr>
     
 
     
@@ -316,8 +414,12 @@ your app (e.g. <code>App#homey</code>/<code>Driver#homey</code>/<code>Device#hom
     
 
     
+
+    
+
+    
     <section id="section-methods">
-      <h2 class="subsection-title">Methods</h2>
+      <h2 class="subsection-title">Instance Methods</h2>
 
       
       
@@ -1062,8 +1164,12 @@ documentation: https://docs.sentry.io/clients/node/usage/#raven-node-additional-
     
 
     
+
+    
+
+    
     <li class="toc__item">
-      <a class="toc__link" href="#section-methods">Methods</a>
+      <a class="toc__link" href="#section-methods">Instance Methods</a>
       <ul class="toc__list toc__list--lvl2">
         
         <li class="toc__item">
@@ -1114,6 +1220,8 @@ documentation: https://docs.sentry.io/clients/node/usage/#raven-node-additional-
 <script src="scripts/table.js"></script>
 <script src="scripts/hash-link.js"></script>
 <script src="scripts/docs-nav.js"></script>
+<script src="scripts/hash-highlight.js"></script>
+<script src="scripts/darkmode.js"></script>
 
 <link type="text/css" rel="stylesheet" href="styles/atom-one-light.css">
 <script src="scripts/highlight.min.js"></script>
