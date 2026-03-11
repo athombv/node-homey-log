@@ -10,7 +10,7 @@
     "build": "npm run jsdoc:clean; npm run jsdoc;",
     "jsdoc": "jsdoc --configure ./docs/jsdoc.json;",
     "jsdoc:clean": "rm -rf ./build",
-    "jsdoc:watch": "watch \"npm run jsdoc:clean && npm run jsdoc\" lib docs \"node_modules/homey-jsdoc-template\"",
+    "jsdoc:watch": "watch \"npm run jsdoc:clean && npm run jsdoc\" lib docs \"node_modules/@athombv/jsdoc-template\"",
     "typings:generate": "tsc"
   },
   "repository": {
