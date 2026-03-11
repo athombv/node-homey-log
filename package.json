@@ -1,6 +1,6 @@
 {
   "name": "homey-log",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Interface with Sentry for Homey",
   "main": "index.js",
   "scripts": {
