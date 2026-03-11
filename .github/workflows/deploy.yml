@@ -105,8 +105,6 @@ jobs:
           npm publish
           VERSION="$(node -p "require('./package.json').version")"
           echo package_version=${VERSION} >> $GITHUB_ENV
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
 
       # Publish to beta when this action is running on branch testing
       - name: Publish to beta
@@ -115,5 +113,3 @@ jobs:
           npm publish --tag beta
           VERSION="$(node -p "require('./package.json').version")@beta"
           echo package_version=${VERSION} >> $GITHUB_ENV
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
