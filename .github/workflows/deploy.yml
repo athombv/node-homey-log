@@ -59,10 +59,10 @@ jobs:
           git config --local user.name "Homey Github Actions Bot"
 
       # Configures a Node.js environment.
-      - name: Set up node 12 environment
+      - name: Set up Node.js
         uses: actions/setup-node@v5
         with:
-          node-version: '12'
+          node-version: '24'
           # Needed for publishing to npm
           registry-url: 'https://registry.npmjs.org'
 
