@@ -2,4 +2,4 @@
 
 const Log = require('./lib/Log');
 
-module.exports = {Log};
+module.exports = { Log };
