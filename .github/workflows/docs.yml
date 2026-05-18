@@ -18,7 +18,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v5
       with:
-        node-version: '12'
+        node-version: '24'
         registry-url: https://registry.npmjs.org
 
     # Build
@@ -26,8 +26,6 @@ jobs:
       run: |
         npm ci
         npm run build
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.HOMEY_GITHUB_ACTIONS_BOT_PERSONAL_ACCESS_TOKEN }}
 
     # Deploy
     - name: Deploy To GitHub Pages

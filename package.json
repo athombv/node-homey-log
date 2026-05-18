@@ -30,7 +30,7 @@
     "raven": "github:athombv/raven-node"
   },
   "devDependencies": {
-    "@athombv/jsdoc-template": "^1.6.3",
+    "@athombv/jsdoc-template": "^1.7.0",
     "@types/homey": "npm:homey-apps-sdk-v3-types@^0.3.0",
     "@types/node": "^12.20.55",
     "concurrently": "^5.1.0",
